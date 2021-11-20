@@ -1,6 +1,9 @@
 
 
 #include <iostream>
+#include <stdlib.h>
+#include <time.h>
+#define SIZE_ARRAY 100
 using namespace std;
 
 void insertion_sort(int  a[], int size) {
@@ -26,10 +29,18 @@ void insertion_sort(int  a[], int size) {
 }
 int main()
 {
-	const int size = 10;
-	int vet[size]={3,6,4,5,8,1,9,7,2,0};
-	insertion_sort(vet, size);
-	for (int i = 0; i < size; i++)
+	
+	int vet[SIZE_ARRAY];
+	int seed = time(NULL);
+	for (int i = 0; i < SIZE_ARRAY; i++) {
+		vet[i] = rand()%999999;
+		cout << vet[i];
+	}
+	cout << endl;
+
+	insertion_sort(vet, SIZE_ARRAY);
+
+	for (int i = 0; i < SIZE_ARRAY; i++)
 	{
 		cout << vet[i] << " ";
 	}
