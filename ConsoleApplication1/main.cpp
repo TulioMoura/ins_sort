@@ -23,10 +23,7 @@ void insertion_sort(int  a[], int size) {
 				break; //no caso falso não é necessário continuar nesta estrutura de repetição
 			}
 		}
-		for (int t = 0; t < size; t++) {
-			cout << a[t] << " "; //apenas escreve o vetor na tela a cada interação do algoritimo
-		}
-		cout << endl;
+		
 	}
 	
 }
@@ -40,6 +37,10 @@ int main()
 		vet[i] = (rand()%1000)-1;
 		cout << vet[i]<<" ";
 	}
+	cout << endl<<endl;
+
+	char w;
+	cin >> w;
 	cout << endl;
 
 	insertion_sort(vet, SIZE_ARRAY); //chamada da função
@@ -48,5 +49,7 @@ int main()
 	{
 		cout << vet[i] << " "; //mostra  o vetor ordenado na tela
 	}
+	cout << endl;
+	system("pause");
 }
 
